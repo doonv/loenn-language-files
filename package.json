@@ -2,7 +2,7 @@
   "name": "loenn-language-files",
   "displayName": "Loenn Language Files",
   "description": "Syntax highlighting for Loenn .lang files",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.78.0"
   },
@@ -10,6 +10,7 @@
     "Programming Languages"
   ],
   "publisher": "doonv",
+  "license": "WTFPL",
   "contributes": {
     "languages": [
       {
