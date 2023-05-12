@@ -1,0 +1,35 @@
+{
+  "name": "loenn-language-files",
+  "displayName": "Loenn Language Files",
+  "description": "Syntax highlighting for Loenn .lang files",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "publisher": "doonv",
+  "contributes": {
+    "languages": [
+      {
+        "id": "loenn-lang",
+        "aliases": [
+          "Loenn Language File",
+          "loenn-lang"
+        ],
+        "extensions": [
+          ".lang"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "loenn-lang",
+        "scopeName": "source.lang",
+        "path": "./syntaxes/loenn-lang.tmLanguage.json"
+      }
+    ]
+  }
+}

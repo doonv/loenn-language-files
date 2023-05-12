@@ -1,0 +1,86 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Loenn Language File",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#entityids"
+		},
+		{
+			"include": "#placementsattributes"
+		},
+		{
+			"include": "#namedescription"
+		},
+		{
+			"include": "#placementname"
+		},
+		{
+			"include": "#symbols"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.control.loenn-lang",
+					"match": "^#.*?\\n"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.loenn-lang",
+					"match": "^(entities|mods|triggers|scenes|layers|tools|decals|room|dependencies|style|metadata)"
+				}
+			]
+		},
+		"entityids": {
+			"patterns": [
+				{
+					"name": "entity.name.function.loenn-lang",
+					"match": "(?<=^entities\\.|^mods\\.|^triggers\\.).*?(?=\\.|\\n)"
+				}
+			]
+		},
+		"placementsattributes": {
+			"patterns": [
+				{
+					"name": "variable",
+					"match": "(placements|attributes|attribute)"
+				}
+			]
+		},
+		"namedescription": {
+			"patterns": [
+				{
+					"name": "constant",
+					"match": "(name|description)(?=.*?=)"
+				}
+			]
+		},
+		"placementname": {
+			"patterns": [
+				{
+					"name": "string",
+					"match": "(?<=description\\.|name\\.).*?(?=\\=)"
+				}
+			]
+		},
+		"symbols": {
+			"patterns": [
+				{
+					"name": "constant.character.escape.loenn-lang",
+					"match": "(\\+|\\-|\\.|\\=|\\,|\\\\n)"
+				}
+			]
+		}
+	},
+	"scopeName": "source.lang"
+}
